@@ -22,6 +22,21 @@
         .card-bg {
             background-color: #111;
         }
+        .hero-bg {
+            background: radial-gradient(circle at top left, rgba(236, 72, 153, 0.2) 0%, rgba(249, 115, 22, 0.05) 50%, rgba(234, 179, 8, 0) 100%), #000;
+        }
+        .form-input {
+            background-color: #1c1917; /* A slightly darker shade for the input */
+            border-color: #444; /* Darker border for contrast */
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+        .form-input:focus {
+            border-color: #f97316; /* Focus color on the input field */
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -41,7 +56,7 @@
     <main class="container mx-auto px-4 py-8 md:py-16">
 
         <!-- Hero Section -->
-        <section id="home" class="text-center py-20 md:py-32">
+        <section id="home" class="text-center py-20 md:py-32 hero-bg">
             <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
                 Innovate & Create <span class="gradient-text">Hackathon</span>
             </h1>
@@ -55,108 +70,144 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Problem Statement Card 1 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">1. Research and Design a Website in Figma</h3>
-                        <p class="mt-2 text-gray-400">Research and conceptualize an NFC card-based business, then create a complete landing page design in Figma.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-1" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">1. Research and Design a Website in Figma 📝</h3>
+                            <p class="mt-2 text-gray-400">Research and conceptualize an NFC card-based business, then create a complete landing page design in Figma.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="1">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 2 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">2. UI Implementation from Figma Design</h3>
-                        <p class="mt-2 text-gray-400">Develop a fully responsive frontend that replicates the provided Figma design with pixel-perfect accuracy.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-2" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">2. UI Implementation from Figma Design 💻</h3>
+                            <p class="mt-2 text-gray-400">Develop a fully responsive frontend that replicates the provided Figma design with pixel-perfect accuracy.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="2">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 3 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">3. Implement below image using HTML, CSS, and JavaScript</h3>
-                        <p class="mt-2 text-gray-400">Implement a design based on a provided image using HTML, CSS, and JavaScript.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-3" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">3. Implement below image using HTML, CSS, and JavaScript 🖼️</h3>
+                            <p class="mt-2 text-gray-400">Implement a design based on a provided image using HTML, CSS, and JavaScript.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="3">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 4 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">4. User-Choice Frontend Project</h3>
-                        <p class="mt-2 text-gray-400">Participants will create a frontend project of their choice while fulfilling the required criteria listed below.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-4" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">4. User-Choice Frontend Project 🚀</h3>
+                            <p class="mt-2 text-gray-400">Participants will create a frontend project of their choice while fulfilling the required criteria listed below.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="4">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 5 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">5. User Authentication</h3>
-                        <p class="mt-2 text-gray-400">Implement a secure system for user registration and login with proper password validation and tokens.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-5" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">5. User Authentication 🔒</h3>
+                            <p class="mt-2 text-gray-400">Implement a secure system for user registration and login with proper password validation and tokens.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="5">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 6 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">6. Product Management – CRUD Operations</h3>
-                        <p class="mt-2 text-gray-400">Create a system where administrators can manage products efficiently using a backend API.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-6" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">6. Product Management – CRUD Operations 📁</h3>
+                            <p class="mt-2 text-gray-400">Create a system where administrators can manage products efficiently using a backend API.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="6">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 7 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">7. Job Search & Filter System</h3>
-                        <p class="mt-2 text-gray-400">Build a backend system that allows users to search and filter job listings efficiently.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-7" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">7. Job Search & Filter System 🔍</h3>
+                            <p class="mt-2 text-gray-400">Build a backend system that allows users to search and filter job listings efficiently.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="7">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 8 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">8. User-Driven Content Posting System</h3>
-                        <p class="mt-2 text-gray-400">Design a system where registered users can create posts and comments, with proper ownership control.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-8" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">8. User-Driven Content Posting System 💬</h3>
+                            <p class="mt-2 text-gray-400">Design a system where registered users can create posts and comments, with proper ownership control.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="8">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 9 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">9. Personal Brand Card Design</h3>
-                        <p class="mt-2 text-gray-400">Design a personal brand card that represents an individual’s identity professionally, visually appealing for digital sharing.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-9" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">9. Personal Brand Card Design 💳</h3>
+                            <p class="mt-2 text-gray-400">Design a personal brand card that represents an individual’s identity professionally, visually appealing for digital sharing.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="9">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 10 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">10. Post Redesign Challenge</h3>
-                        <p class="mt-2 text-gray-400">Take a given post design and create your own improved version, enhancing visual appeal and engagement.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-10" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">10. Post Redesign Challenge 💡</h3>
+                            <p class="mt-2 text-gray-400">Take a given post design and create your own improved version, enhancing visual appeal and engagement.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="10">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 11 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">11. Video Challenge</h3>
-                        <p class="mt-2 text-gray-400">Create a refined, visually appealing version of an original video, demonstrating creativity and attention to detail.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-11" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">11. Video Challenge 🎥</h3>
+                            <p class="mt-2 text-gray-400">Create a refined, visually appealing version of an original video, demonstrating creativity and attention to detail.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="11">Read More</button>
                 </div>
 
                 <!-- Problem Statement Card 12 -->
                 <div class="card-bg p-6 rounded-xl shadow-lg border border-gray-900 hover:border-pink-500 transition-colors flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-semibold text-white">12. Content Creation Challenge</h3>
-                        <p class="mt-2 text-gray-400">Create a refined, visually appealing version of an original post, demonstrating creativity and attention to detail.</p>
+                    <div class="flex items-start">
+                        <img id="problem-img-12" class="w-12 h-12 mr-4" alt="Problem icon">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">12. Content Creation Challenge ✍️</h3>
+                            <p class="mt-2 text-gray-400">Create a refined, visually appealing version of an original post, demonstrating creativity and attention to detail.</p>
+                        </div>
                     </div>
                     <button class="read-more-btn mt-4 w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity" data-problem-id="12">Read More</button>
                 </div>
@@ -164,40 +215,114 @@
         </section>
 
         <!-- Registration Section -->
-        <section id="register" class="py-16 md:py-24">
-            <div class="max-w-xl mx-auto card-bg p-8 rounded-xl shadow-lg border border-gray-900">
-                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-8">Register Your Team</h2>
-                <form id="registration-form" class="space-y-6">
-                    <div id="form-error-message" class="text-red-400 text-center font-medium hidden">Please fill out all fields correctly.</div>
-                    <div>
-                        <label for="team-name" class="block text-sm font-medium text-gray-400">Team Name</label>
-                        <input type="text" id="team-name" name="team-name" placeholder="e.g., The Code Breakers" required class="mt-1 block w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500">
-                    </div>
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-400">Your Full Name</label>
-                        <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" required class="mt-1 block w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-400">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="e.g., jane.doe@example.com" required class="mt-1 block w-full px-4 py-2 border border-gray-700 bg-gray-800 text-white rounded-lg shadow-sm focus:ring-pink-500 focus:border-pink-500">
-                    </div>
-                    <button id="submit-button" type="submit" class="w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity transform hover:scale-105">
-                        Submit Registration
-                    </button>
-                </form>
+        <section id="register" class="py-16 md:py-24 bg-gray-900">
+            <div class="max-w-4xl mx-auto p-8 rounded-xl">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Register Your Team</h2>
+                
+                <!-- Registration Tabs -->
+                <div class="flex justify-center mb-8 space-x-4">
+                    <div id="tab1" class="py-2 px-4 rounded-lg cursor-pointer transition-colors duration-300 bg-gray-700 text-white">Team & College Details</div>
+                    <div id="tab2" class="py-2 px-4 rounded-lg cursor-pointer transition-colors duration-300 text-gray-400 hover:bg-gray-700">Problem Statement & Finalize</div>
+                </div>
 
-                <!-- Success Message Modal -->
-                <div id="success-message" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
-                    <div class="card-bg p-8 rounded-xl shadow-2xl max-w-sm w-full text-center border border-gray-900">
-                        <h3 class="text-2xl font-bold text-white mb-4">Registration Successful!</h3>
-                        <p class="text-gray-400">Thank you for registering. We'll be in touch with more details soon.</p>
-                        <button id="close-message" class="mt-6 bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg hover:bg-gray-600 transition-colors">
-                            Close
-                        </button>
-                    </div>
+                <!-- Registration Form Container -->
+                <div class="card-bg p-8 rounded-xl shadow-lg border border-gray-800">
+                    <form id="registration-form" class="space-y-6">
+
+                        <!-- Step 1: Team and College Details -->
+                        <div id="step-1" class="form-step">
+                            <div id="form-error-message" class="text-red-400 text-center font-medium hidden mb-4">Please fill out all required fields.</div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="space-y-2">
+                                    <label for="member1-name" class="block text-sm font-medium text-gray-400">Name of Member 1 (Team Leader)</label>
+                                    <input type="text" id="member1-name" name="member1-name" placeholder="e.g., John Doe" required class="w-full form-input">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="member2-name" class="block text-sm font-medium text-gray-400">Name of Member 2</label>
+                                    <input type="text" id="member2-name" name="member2-name" placeholder="e.g., Jane Smith" class="w-full form-input">
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="space-y-2">
+                                    <label for="leader-contact" class="block text-sm font-medium text-gray-400">Team Leader Contact No.</label>
+                                    <input type="tel" id="leader-contact" name="leader-contact" placeholder="e.g., 1234567890" required class="w-full form-input">
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="member2-contact" class="block text-sm font-medium text-gray-400">Member 2 Contact No.</label>
+                                    <input type="tel" id="member2-contact" name="member2-contact" placeholder="e.g., 0987654321" class="w-full form-input">
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2 mb-6">
+                                <label for="leader-email" class="block text-sm font-medium text-gray-400">Team Leader Email ID</label>
+                                <input type="email" id="leader-email" name="leader-email" placeholder="e.g., john.doe@example.com" required class="w-full form-input">
+                            </div>
+
+                            <div class="space-y-2 mb-6">
+                                <label for="college-name" class="block text-sm font-medium text-gray-400">College Name</label>
+                                <select id="college-name" name="college-name" required class="w-full form-input">
+                                    <option value="" disabled selected>Select your college</option>
+                                    <option value="college1">Government College of Engineering, Surat</option>
+                                    <option value="college2">Sardar Vallabhbhai National Institute of Technology</option>
+                                    <option value="college3">Birla Vishvakarma Mahavidyalaya</option>
+                                    <option value="college4">Dharmsinh Desai University</option>
+                                    <option value="college5">L.D. College of Engineering</option>
+                                </select>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div class="space-y-2">
+                                    <label for="department" class="block text-sm font-medium text-gray-400">Department</label>
+                                    <select id="department" name="department" required class="w-full form-input">
+                                        <option value="" disabled selected>Select your department</option>
+                                        <option value="cs">Computer Science</option>
+                                        <option value="it">Information Technology</option>
+                                        <option value="ece">Electronics and Communication</option>
+                                        <option value="me">Mechanical Engineering</option>
+                                        <option value="ee">Electrical Engineering</option>
+                                        <option value="ce">Civil Engineering</option>
+                                        <option value="ch">Chemical Engineering</option>
+                                        <option value="au">Automobile Engineering</option>
+                                    </select>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="semester" class="block text-sm font-medium text-gray-400">Semester</label>
+                                    <select id="semester" name="semester" required class="w-full form-input">
+                                        <option value="" disabled selected>Select your semester</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" id="next-step-btn" class="w-full bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity transform hover:scale-105">Next Step</button>
+                        </div>
+
+                        <!-- Step 2: Problem Statement -->
+                        <div id="step-2" class="form-step hidden">
+                            <div class="space-y-2 mb-6">
+                                <label for="problem-statement" class="block text-sm font-medium text-gray-400">Problem Statement</label>
+                                <select id="problem-statement" name="problem-statement" required class="w-full form-input">
+                                    <!-- Options populated by JavaScript -->
+                                </select>
+                            </div>
+                            <div class="flex justify-between mt-6">
+                                <button type="button" id="prev-step-btn" class="bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg hover:bg-gray-600 transition-colors">Previous</button>
+                                <button id="submit-button" type="submit" class="bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-3 px-4 rounded-lg shadow-lg hover:opacity-80 transition-opacity transform hover:scale-105">Submit Registration</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
+
     </main>
 
     <!-- Problem Details Modal (hidden by default) -->
@@ -210,6 +335,18 @@
             <div id="modal-content" class="text-gray-400 leading-relaxed"></div>
         </div>
     </div>
+    
+    <!-- Registration Success Message Modal -->
+    <div id="success-message" class="hidden fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="card-bg p-8 rounded-xl shadow-2xl max-w-sm w-full text-center border border-gray-900">
+            <h3 class="text-2xl font-bold text-white mb-4">Registration Successful!</h3>
+            <p class="text-gray-400">Thank you for registering. We'll be in touch with more details soon.</p>
+            <button id="close-message" class="mt-6 bg-gray-700 text-white font-semibold py-2 px-6 rounded-lg hover:bg-gray-600 transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+
 
     <!-- Footer -->
     <footer class="bg-black text-gray-400 py-6 border-t border-gray-900">
@@ -221,7 +358,7 @@
     <script>
         const problemData = {
             "1": {
-                title: "1. Research and Design a Website in Figma",
+                title: "1. Research and Design a Website in Figma 📝",
                 content: `
                     <p><strong>Objective:</strong> Research and conceptualize an <em>NFC card-based business</em>, then create a <em>complete landing page design</em> in Figma.</p>
                     <p><strong>Key Focus:</strong> The landing page should be <em>modern, visually appealing, and user-friendly, designed to <strong>guide visitors seamlessly toward conversion</em> (e.g., requesting a demo, or making a purchase).</p>
@@ -234,7 +371,7 @@
                 `
             },
             "2": {
-                title: "2. UI Implementation from Figma Design",
+                title: "2. UI Implementation from Figma Design 💻",
                 content: `
                     <p><strong>Objective:</strong> Develop a <em>fully responsive frontend</em> that replicates the provided Figma design with pixel-perfect accuracy.</p>
                     <p><strong>Participants are required to:</strong></p>
@@ -248,20 +385,22 @@
                 `
             },
             "3": {
-                title: "3. Implement below image using HTML, CSS, and JavaScript",
+                title: "3. Implement below image using HTML, CSS, and JavaScript 🖼️",
                 content: `
                     <p>Implement the provided designs using HTML, CSS, and JavaScript. The provided images show a two-part design, likely for a landing page or a section of a website, featuring a card-like layout with text, a button, and a visual element.</p>
                     <p><strong>Note:</strong> The original images could not be loaded directly. Please refer to the intended design to complete this task. The design typically involves a dark theme with a clean, modern layout.</p>
+                    <img src="https://placehold.co/800x400/000/fff?text=Design+Reference+1" alt="Design Reference 1" class="w-full h-auto rounded-lg my-4">
+                    <img src="https://placehold.co/800x400/000/fff?text=Design+Reference+2" alt="Design Reference 2" class="w-full h-auto rounded-lg my-4">
                 `
             },
             "4": {
-                title: "4. User-Choice Frontend Project",
+                title: "4. User-Choice Frontend Project 🚀",
                 content: `
                     <p>Participants will create a <em>frontend project of their choice</em> (e.g., landing page, dashboard, portfolio, product showcase) while <em>fulfilling the required criteria</em> listed below. This allows creativity while ensuring essential frontend skills are tested.</p>
                 `
             },
             "5": {
-                title: "5. User Authentication",
+                title: "5. User Authentication 🔒",
                 content: `
                     <p><strong>Objective:</strong> Implement a secure system for user registration and login.</p>
                     <p><strong>Requirements:</strong></p>
@@ -274,7 +413,7 @@
                 `
             },
             "6": {
-                title: "6. Product Management – CRUD Operations",
+                title: "6. Product Management – CRUD Operations 📁",
                 content: `
                     <p><strong>Objective:</strong> Create a system where administrators can manage products efficiently.</p>
                     <p><strong>Requirements:</strong></p>
@@ -289,7 +428,7 @@
                 `
             },
             "7": {
-                title: "7. Job Search & Filter System",
+                title: "7. Job Search & Filter System 🔍",
                 content: `
                     <p><strong>Objective:</strong> Build a backend system that allows users to <em>search and filter job listings</em> efficiently.</p>
                     <p><strong>Requirements:</strong></p>
@@ -318,7 +457,7 @@
                 `
             },
             "8": {
-                title: "8. User-Driven Content Posting System",
+                title: "8. User-Driven Content Posting System 💬",
                 content: `
                     <p><strong>Objective:</strong> Design a system where registered users can <em>create posts and comments</em>, with proper ownership control.</p>
                     <p><strong>Requirements:</strong></p>
@@ -332,7 +471,7 @@
                 `
             },
             "9": {
-                title: "9. Personal Brand Card Design",
+                title: "9. Personal Brand Card Design 💳",
                 content: `
                     <p><strong>Objective:</strong> Design a <em>personal brand card</em> that represents an individual’s identity professionally. The card should clearly showcase the person’s <em>name, role, contact information, and branding elements</em>, and be visually appealing for sharing digitally or in an NFC-enabled application.</p>
                     <p><strong>Requirements:</strong></p>
@@ -347,7 +486,7 @@
                 `
             },
             "10": {
-                title: "10. Post Redesign Challenge",
+                title: "10. Post Redesign Challenge 💡",
                 content: `
                     <p><strong>Objective:</strong> Take the <em>given post design</em> as a reference and <em>create your own improved version. Focus on enhancing **visual appeal, clarity, and engagement* while keeping the core message intact.</p>
                     <p><strong>Requirements:</strong></p>
@@ -361,13 +500,13 @@
                 `
             },
             "11": {
-                title: "11. Video Challenge",
+                title: "11. Video Challenge 🎥",
                 content: `
                     <p>A <em>refined, visually appealing version</em> of the original post. Demonstrates <em>creativity, design sensibility, and attention to detail</em>. Ready-to-share Figma or digital design mockup.</p>
                 `
             },
             "12": {
-                title: "12. Content Creation Challenge",
+                title: "12. Content Creation Challenge ✍️",
                 content: `
                     <p>A <em>refined, visually appealing version</em> of the original post. Demonstrates <em>creativity, design sensibility, and attention to detail</em>. Ready-to-share Figma or digital design mockup.</p>
                 `
@@ -375,6 +514,8 @@
         };
 
         const form = document.getElementById('registration-form');
+        const nextButton = document.getElementById('next-step-btn');
+        const prevButton = document.getElementById('prev-step-btn');
         const submitButton = document.getElementById('submit-button');
         const successMessage = document.getElementById('success-message');
         const closeMessageButton = document.getElementById('close-message');
@@ -384,16 +525,79 @@
         const modalTitle = document.getElementById('modal-title');
         const modalContent = document.getElementById('modal-content');
         const readMoreButtons = document.querySelectorAll('.read-more-btn');
+        const problemStatementSelect = document.getElementById('problem-statement');
+        const step1 = document.getElementById('step-1');
+        const step2 = document.getElementById('step-2');
+        const tab1 = document.getElementById('tab1');
+        const tab2 = document.getElementById('tab2');
+
+        const problemAssets = {
+            "1": "https://cdn-icons-png.flaticon.com/512/3596/3596041.png", // Web design
+            "2": "https://cdn-icons-png.flaticon.com/512/1005/1005141.png", // Code
+            "3": "https://cdn-icons-png.flaticon.com/512/5752/5752253.png", // Image implementation
+            "4": "https://cdn-icons-png.flaticon.com/512/2873/2873919.png", // Rocket
+            "5": "https://cdn-icons-png.flaticon.com/512/6195/6195700.png", // Lock
+            "6": "https://cdn-icons-png.flaticon.com/512/4609/4609653.png", // Product management
+            "7": "https://cdn-icons-png.flaticon.com/512/1071/1071271.png", // Search
+            "8": "https://cdn-icons-png.flaticon.com/512/866/866388.png", // Comments
+            "9": "https://cdn-icons-png.flaticon.com/512/811/811986.png", // Card design
+            "10": "https://cdn-icons-png.flaticon.com/512/2550/2550269.png", // Redesign
+            "11": "https://cdn-icons-png.flaticon.com/512/628/628902.png", // Video
+            "12": "https://cdn-icons-png.flaticon.com/512/2619/2619744.png", // Content creation
+        };
+
+        // Populate the problem statement dropdown
+        for (const id in problemData) {
+            const option = document.createElement('option');
+            option.value = id;
+            option.textContent = problemData[id].title;
+            problemStatementSelect.appendChild(option);
+            
+            // Set image for the card
+            const imgElement = document.getElementById(`problem-img-${id}`);
+            if (imgElement) {
+                imgElement.src = problemAssets[id];
+            }
+        }
+
+        // Form navigation logic
+        nextButton.addEventListener('click', function() {
+            const member1Name = document.getElementById('member1-name').value;
+            const leaderContact = document.getElementById('leader-contact').value;
+            const leaderEmail = document.getElementById('leader-email').value;
+            const collegeName = document.getElementById('college-name').value;
+            const department = document.getElementById('department').value;
+            const semester = document.getElementById('semester').value;
+            
+            if (!member1Name || !leaderContact || !leaderEmail || !isValidEmail(leaderEmail) || !collegeName || !department || !semester) {
+                formErrorMessage.classList.remove('hidden');
+            } else {
+                formErrorMessage.classList.add('hidden');
+                step1.classList.add('hidden');
+                step2.classList.remove('hidden');
+                tab1.classList.remove('bg-gray-700', 'text-white');
+                tab1.classList.add('text-gray-400', 'hover:bg-gray-700');
+                tab2.classList.add('bg-gray-700', 'text-white');
+                tab2.classList.remove('text-gray-400', 'hover:bg-gray-700');
+            }
+        });
+
+        prevButton.addEventListener('click', function() {
+            step2.classList.add('hidden');
+            step1.classList.remove('hidden');
+            tab2.classList.remove('bg-gray-700', 'text-white');
+            tab2.classList.add('text-gray-400', 'hover:bg-gray-700');
+            tab1.classList.add('bg-gray-700', 'text-white');
+            tab1.classList.remove('text-gray-400', 'hover:bg-gray-700');
+        });
 
         // Form submission logic
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Prevent the default form submission
 
-            const teamName = document.getElementById('team-name').value;
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
+            const problemStatement = document.getElementById('problem-statement').value;
 
-            if (!teamName || !name || !email || !isValidEmail(email)) {
+            if (!problemStatement) {
                 formErrorMessage.classList.remove('hidden');
                 return;
             } else {
@@ -410,6 +614,12 @@
                 submitButton.textContent = 'Submit Registration';
                 submitButton.disabled = false;
                 submitButton.classList.remove('opacity-50');
+                step2.classList.add('hidden');
+                step1.classList.remove('hidden');
+                tab2.classList.remove('bg-gray-700', 'text-white');
+                tab2.classList.add('text-gray-400', 'hover:bg-gray-700');
+                tab1.classList.add('bg-gray-700', 'text-white');
+                tab1.classList.remove('text-gray-400', 'hover:bg-gray-700');
             }, 1500);
         });
 
