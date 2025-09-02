@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Innovate & Create Hackathon</title>
+    <title>Fusion Hack 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +37,20 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
         }
+                .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        .faq-answer.open {
+            max-height: 200px; /* A safe value to accommodate content */
+            padding-top: 1rem;
+        }
+        .faq-answer p {
+            list-style-type: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
     </style>
 </head>
 <body class="text-gray-200">
@@ -44,11 +58,12 @@
     <!-- Header & Navigation -->
     <header class="bg-black sticky top-0 z-50 shadow-md border-b border-gray-900">
         <nav class="container mx-auto px-6 py-4 flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold gradient-text">Hackathon</a>
+            <a href="#" class="text-2xl font-bold gradient-text">Fusion Hack 2025</a>
             <div class="space-x-4 hidden md:flex">
                 <a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a>
                 <a href="#problems" class="text-gray-400 hover:text-white transition-colors">Problem Statements</a>
                 <a href="#register" class="text-gray-400 hover:text-white transition-colors">Register</a>
+                <a href="#faq" class="text-gray-400 hover:text-white transition-colors">FAQ</a>
             </div>
         </nav>
     </header>
@@ -58,9 +73,14 @@
         <!-- Hero Section -->
         <section id="home" class="text-center py-20 md:py-32 hero-bg">
             <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
-                Innovate & Create <span class="gradient-text">Hackathon</span>
+                <span class="gradient-text">Fusion Hack 2025</span> <br>
             </h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">Join us for 48 hours of innovation, collaboration, and problem-solving. Build the future with code!</p>
+            <h3 class="text-4xl md:text-4xl font-extrabold text-white leading-tight">
+                <span class="gradient-text">SDC x SparshNFC</span>
+            </h3>
+        
+            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">Join us for 6 hours of innovation, collaboration, and problem-solving. Build the future with code!</p>
+            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">DATE : 17/09/2025<br> VENUE : BMCET Seminar Hall</p>
             <a href="#register" class="mt-8 inline-block bg-gradient-to-r from-fuchsia-500 via-pink-500 to-orange-500 text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:opacity-80 transition-opacity transform hover:scale-105">Register Now</a>
         </section>
 
@@ -236,39 +256,40 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                 <div class="space-y-2">
                                     <label for="member1-name" class="block text-sm font-medium text-gray-400">Name of Member 1 (Team Leader)</label>
-                                    <input type="text" id="member1-name" name="member1-name" placeholder="e.g., John Doe" required class="w-full form-input">
+                                    <input type="text" id="member1-name" name="member1-name" placeholder="e.g., Rituraj Singh" required class="w-full form-input">
                                 </div>
                                 <div class="space-y-2">
                                     <label for="member2-name" class="block text-sm font-medium text-gray-400">Name of Member 2</label>
-                                    <input type="text" id="member2-name" name="member2-name" placeholder="e.g., Jane Smith" class="w-full form-input">
+                                    <input type="text" id="member2-name" name="member2-name" placeholder="e.g., Rituraj Singh" class="w-full form-input">
                                 </div>
                             </div>
                             
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                 <div class="space-y-2">
                                     <label for="leader-contact" class="block text-sm font-medium text-gray-400">Team Leader Contact No.</label>
-                                    <input type="tel" id="leader-contact" name="leader-contact" placeholder="e.g., 1234567890" required class="w-full form-input">
+                                    <input type="tel" id="leader-contact" name="leader-contact" placeholder="e.g., 7990201438" required class="w-full form-input">
                                 </div>
                                 <div class="space-y-2">
                                     <label for="member2-contact" class="block text-sm font-medium text-gray-400">Member 2 Contact No.</label>
-                                    <input type="tel" id="member2-contact" name="member2-contact" placeholder="e.g., 0987654321" class="w-full form-input">
+                                    <input type="tel" id="member2-contact" name="member2-contact" placeholder="e.g., 7990201438" class="w-full form-input">
                                 </div>
                             </div>
                             
                             <div class="space-y-2 mb-6">
                                 <label for="leader-email" class="block text-sm font-medium text-gray-400">Team Leader Email ID</label>
-                                <input type="email" id="leader-email" name="leader-email" placeholder="e.g., john.doe@example.com" required class="w-full form-input">
+                                <input type="email" id="leader-email" name="leader-email" placeholder="e.g., Sparsh@example.com" required class="w-full form-input">
                             </div>
 
                             <div class="space-y-2 mb-6">
                                 <label for="college-name" class="block text-sm font-medium text-gray-400">College Name</label>
                                 <select id="college-name" name="college-name" required class="w-full form-input">
                                     <option value="" disabled selected>Select your college</option>
-                                    <option value="college1">Government College of Engineering, Surat</option>
-                                    <option value="college2">Sardar Vallabhbhai National Institute of Technology</option>
-                                    <option value="college3">Birla Vishvakarma Mahavidyalaya</option>
-                                    <option value="college4">Dharmsinh Desai University</option>
-                                    <option value="college5">L.D. College of Engineering</option>
+                                    <option value="college1">Bhagwan Mahavir College of Engineering & Technology.</option>
+                                    <option value="college2">Bhagwan Arihant College of Information Technology.</option>
+                                    <option value="college3">Mahavir Swami College of Engineering & Technology.</option>
+                                    <option value="college4">Bhagwan Mahavir Polytechnic</option>
+                                    <option value="college4">Mahavir Swami Polytechnic</option>
+                                  
                                 </select>
                             </div>
                             
@@ -277,7 +298,7 @@
                                     <label for="department" class="block text-sm font-medium text-gray-400">Department</label>
                                     <select id="department" name="department" required class="w-full form-input">
                                         <option value="" disabled selected>Select your department</option>
-                                        <option value="cs">Computer Science</option>
+                                        <option value="cs">Computer Engineering</option>
                                         <option value="it">Information Technology</option>
                                         <option value="ece">Electronics and Communication</option>
                                         <option value="me">Mechanical Engineering</option>
@@ -323,6 +344,64 @@
             </div>
         </section>
 
+                <!-- FAQ Section -->
+        <section id="faq" class="py-16 md:py-24">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-white mb-12">Frequently Asked Questions</h2>
+            <div class="max-w-4xl mx-auto divide-y divide-gray-800">
+                <!-- FAQ Item 1 -->
+                <div class="py-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-xl font-semibold text-white focus:outline-none" aria-expanded="false">
+                        <span>Can I participate individually?</span>
+                        <span class="text-2xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed">
+                        <p>Yes! Individuals can register and will either form teams onsite or work solo.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div class="py-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-xl font-semibold text-white focus:outline-none" aria-expanded="false">
+                        <span>How many members can be in a team?</span>
+                        <span class="text-2xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed">
+                        <p>Teams can have 1–2 members. Individuals will also be grouped if possible.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 3 -->
+                <div class="py-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-xl font-semibold text-white focus:outline-none" aria-expanded="false">
+                        <span>What tools or technologies can I use?</span>
+                        <span class="text-2xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed">
+                        <p>You can use HTML, CSS, JavaScript, React, Figma, video editing tools, or any relevant tech for your project.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 4 -->
+                <div class="py-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-xl font-semibold text-white focus:outline-none" aria-expanded="false">
+                        <span>Will participants get any support or stipend?</span>
+                        <span class="text-2xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed">
+                        <p>Yes! Selected participants may be offered a stipend-based internship with SparshNFC after the hackathon.</p>
+                    </div>
+                </div>
+                <!-- FAQ Item 5 -->
+                <div class="py-4">
+                    <button class="faq-btn flex justify-between items-center w-full text-xl font-semibold text-white focus:outline-none" aria-expanded="false">
+                        <span>Can I use AI tools like ChatGPT or Copilot?</span>
+                        <span class="text-2xl transform transition-transform duration-300">+</span>
+                    </button>
+                    <div class="faq-answer px-6 text-gray-400 leading-relaxed">
+                        <p>Yes! You can use AI tools to help with coding, design, or content creation. However, you must fully understand and be able to explain every line of code or design choice during the evaluation. Using AI as a guide is allowed, but copy-pasting without understanding is not permitted.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
     </main>
 
     <!-- Problem Details Modal (hidden by default) -->
@@ -351,7 +430,7 @@
     <!-- Footer -->
     <footer class="bg-black text-gray-400 py-6 border-t border-gray-900">
         <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2024 Innovate & Create Hackathon. All rights reserved.</p>
+            <p>SDC X Sparshnf 2025 &copy;  Hackathon. All rights reserved .</p>
         </div>
     </footer>
 
@@ -360,12 +439,12 @@
             "1": {
                 title: "1. Research and Design a Website in Figma 📝",
                 content: `
-                    <p><strong>Objective:</strong> Research and conceptualize an <em>NFC card-based business</em>, then create a <em>complete landing page design</em> in Figma.</p>
-                    <p><strong>Key Focus:</strong> The landing page should be <em>modern, visually appealing, and user-friendly, designed to <strong>guide visitors seamlessly toward conversion</em> (e.g., requesting a demo, or making a purchase).</p>
+                    <p><strong>Objective:</strong> Research and conceptualize an NFC card-based business, then create a complete landing page design in Figma.</p>
+                    <p><strong>Key Focus:</strong> The landing page should be modern, visually appealing, and user-friendly, designed to <strong>guide visitors seamlessly toward conversion (e.g., requesting a demo, or making a purchase).</p>
                     <p><strong>Expected Outcome:</strong></p>
                     <ul>
-                        <li>A <em>fully designed landing page in Figma</em> that communicates the NFC business/product effectively.</li>
-                        <li>Clear <em>user journey</em> from awareness to conversion.</li>
+                        <li>A fully designed landing page in Figma that communicates the NFC business/product effectively.</li>
+                        <li>Clear user journey from awareness to conversion.</li>
                         <li>Ready-to-hand-off design for further implementation or marketing use.</li>
                     </ul>
                 `
@@ -373,15 +452,15 @@
             "2": {
                 title: "2. UI Implementation from Figma Design 💻",
                 content: `
-                    <p><strong>Objective:</strong> Develop a <em>fully responsive frontend</em> that replicates the provided Figma design with pixel-perfect accuracy.</p>
+                    <p><strong>Objective:</strong> Develop a fully responsive frontend that replicates the provided Figma design with pixel-perfect accuracy.</p>
                     <p><strong>Participants are required to:</strong></p>
                     <ol>
-                        <li><em>Implement all screens and components</em> exactly as shown in the Figma design.</li>
-                        <li>Ensure <em>responsive layouts</em> for <em>desktop, tablet, and mobile</em> views.</li>
-                        <li>Use <em>modern frontend technologies</em> (HTML, CSS, JavaScript, or frameworks like React/Vue) to match interactions, animations, and UI behavior in the Figma file.</li>
-                        <li>Follow <em>design specifications.</em></li>
+                        <li>Implement all screens and components exactly as shown in the Figma design.</li>
+                        <li>Ensure responsive layouts for desktop, tablet, and mobile views.</li>
+                        <li>Use modern frontend technologies (HTML, CSS, JavaScript, or frameworks like React/Vue) to match interactions, animations, and UI behavior in the Figma file.</li>
+                        <li>Follow design specifications.</li>
                     </ol>
-                    <p>Figma Link: <a href="https://www.figma.com/design/UAwMO3APurvcmOEUplpNKf/Untitled?node-id=0-1&t=lL7pN3i8tir6RkQ2-1" target="_blank" class="text-orange-500 hover:text-orange-400">https://www.figma.com/design/UAwMO3APurvcmOEUplpNKf/Untitled?node-id=0-1&t=lL7pN3i8tir6RkQ2-1</a></p>
+                    <p>Figma Link: <a href="https://www.figma.com/design/UAwMO3APurvcmOEUplpNKf/Untitled?node-id=0-1&t=lL7pN3i8tir6RkQ2-1" target="_blank" class="text-orange-500 hover:text-orange-400">Figma Disign</a></p>
                 `
             },
             "3": {
@@ -389,14 +468,14 @@
                 content: `
                     <p>Implement the provided designs using HTML, CSS, and JavaScript. The provided images show a two-part design, likely for a landing page or a section of a website, featuring a card-like layout with text, a button, and a visual element.</p>
                     <p><strong>Note:</strong> The original images could not be loaded directly. Please refer to the intended design to complete this task. The design typically involves a dark theme with a clean, modern layout.</p>
-                    <img src="https://placehold.co/800x400/000/fff?text=Design+Reference+1" alt="Design Reference 1" class="w-full h-auto rounded-lg my-4">
-                    <img src="https://placehold.co/800x400/000/fff?text=Design+Reference+2" alt="Design Reference 2" class="w-full h-auto rounded-lg my-4">
+                    <img src="1ps.jpeg" alt="Design Reference 1" class="w-full h-auto rounded-lg my-4">
+                    <img src="2ps.jpeg" alt="Design Reference 2" class="w-full h-auto rounded-lg my-4">
                 `
             },
             "4": {
                 title: "4. User-Choice Frontend Project 🚀",
                 content: `
-                    <p>Participants will create a <em>frontend project of their choice</em> (e.g., landing page, dashboard, portfolio, product showcase) while <em>fulfilling the required criteria</em> listed below. This allows creativity while ensuring essential frontend skills are tested.</p>
+                    <p>Participants will create a frontend project of their choice (e.g., landing page, dashboard, portfolio, product showcase) while fulfilling the required criteria listed below. This allows creativity while ensuring essential frontend skills are tested.</p>
                 `
             },
             "5": {
@@ -405,9 +484,9 @@
                     <p><strong>Objective:</strong> Implement a secure system for user registration and login.</p>
                     <p><strong>Requirements:</strong></p>
                     <ul>
-                        <li>Users can <em>register</em> with email/username and password.</li>
-                        <li>Authentication can be implemented using <em>JWT tokens</em> or <em>sessions</em>.</li>
-                        <li>Ensure proper <em>password validation</em>.</li>
+                        <li>Users can register with email/username and password.</li>
+                        <li>Authentication can be implemented using JWT tokens or sessions.</li>
+                        <li>Ensure proper password validation.</li>
                     </ul>
                     <p><strong>Expected Outcome:</strong> A working authentication system where only registered users can access certain endpoints.</p>
                 `
@@ -418,35 +497,35 @@
                     <p><strong>Objective:</strong> Create a system where administrators can manage products efficiently.</p>
                     <p><strong>Requirements:</strong></p>
                     <ol>
-                        <li><em>Create:</em> Add new products with fields.</li>
-                        <li><em>Read:</em> Fetch all products or a single product by ID.</li>
-                        <li><em>Update:</em> Update product details.</li>
-                        <li><em>Delete:</em> Delete a product.</li>
-                        <li><em>Data Storage:</em> Store products in a database.</li>
+                        <li>Create: Add new products with fields.</li>
+                        <li>Read: Fetch all products or a single product by ID.</li>
+                        <li>Update: Update product details.</li>
+                        <li>Delete: Delete a product.</li>
+                        <li>Data Storage: Store products in a database.</li>
                     </ol>
-                    <p><strong>Expected Outcome:</strong> Fully functional backend API allowing admins to <em>create, view, update, and delete products</em>.</p>
+                    <p><strong>Expected Outcome:</strong> Fully functional backend API allowing admins to create, view, update, and delete products.</p>
                 `
             },
             "7": {
                 title: "7. Job Search & Filter System 🔍",
                 content: `
-                    <p><strong>Objective:</strong> Build a backend system that allows users to <em>search and filter job listings</em> efficiently.</p>
+                    <p><strong>Objective:</strong> Build a backend system that allows users to search and filter job listings efficiently.</p>
                     <p><strong>Requirements:</strong></p>
                     <ol>
-                        <li><em>Search Functionality:</em>
+                        <li>Search Functionality:
                             <ul>
                                 <li>Search by keywords (e.g., "web Developer").</li>
                                 <li>Partial and case-insensitive matches.</li>
                             </ul>
                         </li>
-                        <li><em>Filtering Options:</em>
+                        <li>Filtering Options:
                             <ul>
-                                <li>Filter by <em>Location</em> (e.g., Surat, Bangalore)</li>
-                                <li>Filter by <em>Domain/Role</em> (e.g., Web Developer, Data Science)</li>
-                                <li>Filter by <em>Company</em> (e.g., Infosys, TCS)</li>
+                                <li>Filter by Location (e.g., Surat, Bangalore)</li>
+                                <li>Filter by Domain/Role (e.g., Web Developer, Data Science)</li>
+                                <li>Filter by Company (e.g., Infosys, TCS)</li>
                             </ul>
                         </li>
-                        <li><em>Combined Filters:</em>
+                        <li>Combined Filters:
                             <ul>
                                 <li>Apply multiple filters together.</li>
                                 <li>Example: Domain = Web Developer + Company = Infosys + Location = Surat.</li>
@@ -459,56 +538,56 @@
             "8": {
                 title: "8. User-Driven Content Posting System 💬",
                 content: `
-                    <p><strong>Objective:</strong> Design a system where registered users can <em>create posts and comments</em>, with proper ownership control.</p>
+                    <p><strong>Objective:</strong> Design a system where registered users can create posts and comments, with proper ownership control.</p>
                     <p><strong>Requirements:</strong></p>
                     <ol>
-                        <li><em>User Authentication:</em> Only registered users can create posts or comments.</li>
-                        <li><em>Post Creation:</em> Users can create posts in multiple formats (text, image).</li>
-                        <li><em>Post Ownership & Deletion:</em> Only the <em>author</em> can delete their post. No other user can modify or delete it.</li>
-                        <li><em>Comment System:</em> Any registered user can comment on posts. Only the <em>comment author</em> can delete their comment. Post authors <em>cannot delete others’ comments</em>.</li>
+                        <li>User Authentication: Only registered users can create posts or comments.</li>
+                        <li>Post Creation: Users can create posts in multiple formats (text, image).</li>
+                        <li>Post Ownership & Deletion: Only the author can delete their post. No other user can modify or delete it.</li>
+                        <li>Comment System: Any registered user can comment on posts. Only the comment author can delete their comment. Post authors cannot delete others’ comments.</li>
                     </ol>
-                    <p><strong>Expected Outcome:</strong> Backend API allowing users to <em>create posts, comment, and manage content</em> securely with ownership rules enforced.</p>
+                    <p><strong>Expected Outcome:</strong> Backend API allowing users to create posts, comment, and manage content securely with ownership rules enforced.</p>
                 `
             },
             "9": {
                 title: "9. Personal Brand Card Design 💳",
                 content: `
-                    <p><strong>Objective:</strong> Design a <em>personal brand card</em> that represents an individual’s identity professionally. The card should clearly showcase the person’s <em>name, role, contact information, and branding elements</em>, and be visually appealing for sharing digitally or in an NFC-enabled application.</p>
+                    <p><strong>Objective:</strong> Design a personal brand card that represents an individual’s identity professionally. The card should clearly showcase the person’s name, role, contact information, and branding elements, and be visually appealing for sharing digitally or in an NFC-enabled application.</p>
                     <p><strong>Requirements:</strong></p>
                     <ol>
-                        <li><em>Card Content:</em> Full Name, Title / Role / Profession, Contact details (phone, email, social links), Optional: Short tagline or personal motto.</li>
-                        <li><em>Design & Branding:</em> Use a <em>consistent color palette, typography, and layout</em> reflecting the individual’s brand. Include <em>profile image or logo</em> if desired. Ensure <em>visual hierarchy</em> for easy reading.</li>
-                        <li><em>Interactivity (Optional):</em> Hover effects, clickable links, or QR/NFC integration for digital sharing.</li>
-                        <li><em>Format & Responsiveness:</em> Design should work for <em>digital sharing</em> (social media, email, app) and adapt to <em>different screen sizes</em>. Maintain clarity and aesthetics even at smaller sizes.</li>
-                        <li><em>Creativity & Professionalism:</em> Showcase <em>personal branding</em> through colors, fonts, icons, or unique design elements. Keep a <em>clean, modern, and professional look</em>.</li>
+                        <li>Card Content: Full Name, Title / Role / Profession, Contact details (phone, email, social links), Optional: Short tagline or personal motto.</li>
+                        <li>Design & Branding: Use a consistent color palette, typography, and layout< reflecting the individual’s brand. Include profile image or logo if desired. Ensure visual hierarchy for easy reading.</li>
+                        <li>Interactivity (Optional): Hover effects, clickable links, or QR/NFC integration for digital sharing.</li>
+                        <li>Format & Responsiveness: Design should work for digital sharing (social media, email, app) and adapt to different screen sizes. Maintain clarity and aesthetics even at smaller sizes.</li>
+                        <li>Creativity & Professionalism: Showcase personal branding through colors, fonts, icons, or unique design elements. Keep a clean, modern, and professional look.</li>
                     </ol>
-                    <p><strong>Expected Outcome:</strong> A <em>polished personal brand card</em> that can be shared digitally or integrated into NFC applications. Demonstrates <em>design sensibility, clarity, and professional branding</em>. Ready-to-use Figma design with clear content hierarchy and visual appeal.</p>
+                    <p><strong>Expected Outcome:</strong> A polished personal brand card that can be shared digitally or integrated into NFC applications. Demonstrates design sensibility, clarity, and professional branding. Ready-to-use Figma design with clear content hierarchy and visual appeal.</p>
                 `
             },
             "10": {
                 title: "10. Post Redesign Challenge 💡",
                 content: `
-                    <p><strong>Objective:</strong> Take the <em>given post design</em> as a reference and <em>create your own improved version. Focus on enhancing **visual appeal, clarity, and engagement* while keeping the core message intact.</p>
+                    <p><strong>Objective:</strong> Take the given post design as a reference and create your own improved version. Focus on enhancing **visual appeal, clarity, and engagement* while keeping the core message intact.</p>
                     <p><strong>Requirements:</strong></p>
                     <ol>
-                        <li><em>Redesign & Creativity:</em> Analyze the given post and identify areas for improvement. Reimagine layout, colors, typography, and visuals to make it more <em>engaging and modern</em>.</li>
-                        <li><em>Content & Messaging:</em> Maintain the <em>core information/message</em> of the original post. Optional: Add supporting elements like icons, illustrations, or call-to-action.</li>
-                        <li><em>Design Principles:</em> Ensure a <em>clear visual hierarchy</em> and readability. Use <em>consistent colors, fonts, and spacing</em>. Make the design suitable for <em>digital sharing</em> (social media, app, website).</li>
-                        <li><em>Creativity & Personal Touch:</em> Add your <em>own style or branding elements</em> to make it unique. Incorporate interactive elements if applicable (for digital post mockups).</li>
+                        <li>Redesign & Creativity: Analyze the given post and identify areas for improvement. Reimagine layout, colors, typography, and visuals to make it more engaging and modern.</li>
+                        <li>Content & Messaging: Maintain the core information/message of the original post. Optional: Add supporting elements like icons, illustrations, or call-to-action.</li>
+                        <li>Design Principles: Ensure a clear visual hierarchy and readability. Use consistent colors, fonts, and spacing. Make the design suitable for digital sharing (social media, app, website).</li>
+                        <li>Creativity & Personal Touch: Add your own style or branding elements to make it unique. Incorporate interactive elements if applicable (for digital post mockups).</li>
                     </ol>
-                    <p><strong>Expected Outcome:</strong> A <em>refined, visually appealing version</em> of the original post. Demonstrates <em>creativity, design sensibility, and attention to detail</em>. Ready-to-share Figma or digital design mockup.</p>
+                    <p><strong>Expected Outcome:</strong> A refined, visually appealing version of the original post. Demonstrates creativity, design sensibility, and attention to detail. Ready-to-share Figma or digital design mockup.</p>
                 `
             },
             "11": {
                 title: "11. Video Challenge 🎥",
                 content: `
-                    <p>A <em>refined, visually appealing version</em> of the original post. Demonstrates <em>creativity, design sensibility, and attention to detail</em>. Ready-to-share Figma or digital design mockup.</p>
+                    <p>A refined, visually appealing version of the original post. Demonstrates creativity, design sensibility, and attention to detail. Ready-to-share Figma or digital design mockup.</p>
                 `
             },
             "12": {
                 title: "12. Content Creation Challenge ✍️",
                 content: `
-                    <p>A <em>refined, visually appealing version</em> of the original post. Demonstrates <em>creativity, design sensibility, and attention to detail</em>. Ready-to-share Figma or digital design mockup.</p>
+                    <p>A refined, visually appealing version of the original post. Demonstrates creativity, design sensibility, and attention to detail. Ready-to-share Figma or digital design mockup.</p>
                 `
             }
         };
@@ -530,6 +609,7 @@
         const step2 = document.getElementById('step-2');
         const tab1 = document.getElementById('tab1');
         const tab2 = document.getElementById('tab2');
+        const faqButtons = document.querySelectorAll('.faq-btn');
 
         const problemAssets = {
             "1": "https://cdn-icons-png.flaticon.com/512/3596/3596041.png", // Web design
@@ -542,7 +622,7 @@
             "8": "https://cdn-icons-png.flaticon.com/512/866/866388.png", // Comments
             "9": "https://cdn-icons-png.flaticon.com/512/811/811986.png", // Card design
             "10": "https://cdn-icons-png.flaticon.com/512/2550/2550269.png", // Redesign
-            "11": "https://cdn-icons-png.flaticon.com/512/628/628902.png", // Video
+            "11": "https://cdn-icons-png.flaticon.com/512/5752/5752253.png", // Image implementation
             "12": "https://cdn-icons-png.flaticon.com/512/2619/2619744.png", // Content creation
         };
 
@@ -657,6 +737,31 @@
         // Close success message modal
         closeMessageButton.addEventListener('click', function() {
             successMessage.classList.add('hidden'); // Hide the success message
+        });
+
+        // FAQ Dropdown logic
+        faqButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+                // Close all other open answers
+                faqButtons.forEach(otherButton => {
+                    if (otherButton !== button && otherButton.getAttribute('aria-expanded') === 'true') {
+                        otherButton.setAttribute('aria-expanded', 'false');
+                        otherButton.nextElementSibling.classList.remove('open');
+                    }
+                });
+
+                // Toggle the current answer
+                if (isExpanded) {
+                    button.setAttribute('aria-expanded', 'false');
+                    answer.classList.remove('open');
+                } else {
+                    button.setAttribute('aria-expanded', 'true');
+                    answer.classList.add('open');
+                }
+            });
         });
     </script>
 </body>
